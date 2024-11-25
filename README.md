@@ -7,13 +7,13 @@ Made by Luke Regalado and Jaryll Salvador of LBYARCH S17.
 - SASM
 
 - NASM
-   -Included in sasm
+    -Included in sasm
   
 - Dev-Cpp TDM-GCC
- - Download the installer
+  - Download the installer
 
 - GCC
- - Included in dev-cpp tdm-gcc
+  - Included in dev-cpp tdm-gcc
 
 ## TO COMPILE and RUN (using cmd with cd to root folder of the project):
 nasm -f win64 asmfile.asm
