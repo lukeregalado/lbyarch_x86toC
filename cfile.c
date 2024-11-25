@@ -6,14 +6,16 @@ extern void imgCvtGrayDoubleToInt(int total_size, float* image, int* int_image);
 
 // generates random float values (depending on total_size)
 void generate_random_image(float* image, int total_size) {
-    for (int i = 0; i < total_size; i++) {
-        image[i] = (float)rand() / RAND_MAX; // Random float between 0 and 1
-    }
+     int i;
+     for (int i = 0; i < total_size; i++) {
+         image[i] = (float)rand() / RAND_MAX; // Random float between 0 and 1
+     }
 }
 
 // function that validates the correctes of output
 int validate_output(float* image, int* int_image, int total_size) {
-    for (int i = 0; i < total_size; i++) {
+    int i;
+    for (i = 0; i < total_size; i++) {
         int expected = (int)(image[i] * 255.0 + 0.5); // expected rounded int value
         
         if (int_image[i] != expected) {
@@ -29,13 +31,15 @@ void test_mode() {
     int num_sizes = sizeof(sizes) / sizeof(sizes[0]);
     int iterations = 30;          // specs: "run at least 30 times to get ave. exec. time"
     srand(time(NULL));            // seed for num. gen.
+    
+    int s, i, iter;
 
-    for (int s = 0; s < num_sizes; s++) {
+    for (s = 0; s < num_sizes; s++) {
         int width = sizes[s];
         int height = sizes[s];
         int total_size = width * height;
 
-        for (int i = 0; i < 63; i++) {
+        for (i = 0; i < 63; i++) {
              if (i == 0) {          // top left
                 printf("%c", 218);   
                 
@@ -64,7 +68,7 @@ void test_mode() {
         double total_time = 0.0;
         int runs = 0;
 
-        for (int iter = 0; iter < iterations; iter++) {
+        for (iter = 0; iter < iterations; iter++) {
             generate_random_image(image, total_size); 
 
             // timer
@@ -85,7 +89,7 @@ void test_mode() {
             } 
         }
         
-         for (int i = 0; i < 63; i++) {
+         for (i = 0; i < 63; i++) {
              if (i == 0) {          // top left
                 printf("%c", 195);   
                 
@@ -109,7 +113,7 @@ void test_mode() {
         sprintf(message, "Average execution time for size %dx%d: %.6f seconds", width, height, total_time / iterations);
         printf("%c %-59s %c\n", 179, message, 179);
 
-       for (int i = 0; i < 63; i++) {
+       for (i = 0; i < 63; i++) {
          if (i == 0) {          // bot left
             printf("%c", 192);   
             
@@ -128,6 +132,7 @@ void test_mode() {
 
 void manual_mode() {
     int rows, cols;
+    int i, j;
 
     // user prompt: no. of rows, no. of columns
     printf("Enter the height and width (e.g., 3 4):\n");
@@ -147,7 +152,7 @@ void manual_mode() {
 
     // user prompt: values for each pixel (row by col)
     printf("\nEnter the pixel values (row by row):\n");
-    for (int i = 0; i < total_size; i++) {
+    for (i = 0; i < total_size; i++) {
         scanf("%f", &image[i]);
     }
 
@@ -156,8 +161,8 @@ void manual_mode() {
 
     // display converted values
     printf("\nConverted image (integer values):\n");
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < cols; j++) {
             printf("%d ", int_image[i * cols + j]);
         }
         printf("\n");
@@ -168,7 +173,8 @@ void manual_mode() {
 }
 
 void display_menu() {
-     for (int i = 0; i < 52; i++) {
+     int i;
+     for (i = 0; i < 52; i++) {
          if (i == 0) {          // top left
             printf("%c", 218);   
             
@@ -182,7 +188,7 @@ void display_menu() {
      
      printf("%c%31s%19s%c\n", 179, "Choose Mode", "", 179);
      
-     for (int i = 0; i < 52; i++) {
+     for (i = 0; i < 52; i++) {
          if (i == 0) {          // leftmost
             printf("%c", 195);   
          }  else if (i == 51) { // rightmost
@@ -195,7 +201,7 @@ void display_menu() {
      }
      printf("%c 1 %c Test mode (random input, timing, validation) %c\n", 179, 179, 179);
      
-     for (int i = 0; i < 52; i++) {
+     for (i = 0; i < 52; i++) {
          if (i == 0) {          // leftmost
             printf("%c", 195);   
             
@@ -211,7 +217,7 @@ void display_menu() {
      }
      printf("%c 2 %c Manual input mode (user inputs pixel values) %c\n", 179, 179, 179);
      
-     for (int i = 0; i < 52; i++) {
+     for (i = 0; i < 52; i++) {
          if (i == 0) {          // bot left
             printf("%c", 192);   
             
