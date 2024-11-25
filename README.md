@@ -1,8 +1,19 @@
 #LBYARCH_x86toC
 In partial accomplishment of the LBYARCH course. 
 
-Made by Luke Regalado, Jaryll Salvador of LBYARCH S17.
+Made by Luke Regalado and Jaryll Salvador of LBYARCH S17.
 
+## Environment Configuration:
+- SASM
+
+- NASM
+   -Included in sasm
+  
+- Dev-Cpp TDM-GCC
+ - Download the installer
+
+- GCC
+ - Included in dev-cpp tdm-gcc
 
 ## TO COMPILE and RUN (using cmd with cd to root folder of the project):
 nasm -f win64 asmfile.asm
