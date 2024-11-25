@@ -1,5 +1,7 @@
 #LBYARCH_x86toC
-In partial accomplishment of the LBYARCH course. Made by Luke Regalado, Jaryll Salvador of LBYARCH S17.
+In partial accomplishment of the LBYARCH course. 
+
+Made by Luke Regalado, Jaryll Salvador of LBYARCH S17.
 
 
 ## TO COMPILE and RUN (using cmd with cd to root folder of the project):
