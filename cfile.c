@@ -7,7 +7,7 @@ extern void imgCvtGrayDoubleToInt(int total_size, float* image, int* int_image);
 // generates random float values (depending on total_size)
 void generate_random_image(float* image, int total_size) {
      int i;
-     for (int i = 0; i < total_size; i++) {
+     for (i = 0; i < total_size; i++) {
          image[i] = (float)rand() / RAND_MAX; // Random float between 0 and 1
      }
 }
