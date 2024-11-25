@@ -1,8 +1,8 @@
 #LBYARCH_x86toC
-In partial accomplishment of the LBYARCH course. 
+In partial accomplishment of the LBYARCH course. Made by Luke Regalado, Jaryll Salvador of LBYARCH S17.
 
 
-TO COMPILE and RUN (using cmd with cd to root folder of the project):
+## TO COMPILE and RUN (using cmd with cd to root folder of the project):
 nasm -f win64 asmfile.asm
 
 gcc -c cfile.c -o cfile.obj -m64
@@ -12,7 +12,7 @@ gcc cfile.obj asmfile.obj -o cfile.exe -m64
 cfile.exe
 
 
-Execution Time and Analysis:
+## Execution Time and Analysis:
 ## Observations
 All ran 30 times.
 1. **(10x10) :**
@@ -33,7 +33,8 @@ All ran 30 times.
  3. Operations on smaller matrices complete almost instantaneously.
 
 
-Program output (w/ correctness check):
+## Program output (w/ correctness check):
+
 1. **(10x10) :**
    
 ![image](https://github.com/user-attachments/assets/3e0d486c-6c1c-452e-b6ec-8d42434ab45d)
