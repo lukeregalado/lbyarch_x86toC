@@ -35,10 +35,13 @@ All ran 30 times.
 
 Program output (w/ correctness check):
 1. **10x10 :**
+   
 ![image](https://github.com/user-attachments/assets/3e0d486c-6c1c-452e-b6ec-8d42434ab45d)
 2. **100x100 :**
+
 ![image](https://github.com/user-attachments/assets/7a086fe4-7c80-4a6b-96df-06c8208fd689)
 3. **1000x1000 :**
+
 ![image](https://github.com/user-attachments/assets/5a2fa27b-5fe4-4761-b838-c7ec90bb635c)
 
 
