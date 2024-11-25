@@ -7,7 +7,7 @@ Made by Luke Regalado and Jaryll Salvador of LBYARCH S17.
 - SASM
 
 - NASM
-    -Included in sasm
+    - Included in sasm
   
 - Dev-Cpp TDM-GCC
   - Download the installer
